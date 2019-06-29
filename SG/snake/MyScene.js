@@ -195,9 +195,10 @@ class MyScene extends THREE.Scene {
 	else if(this.snake.snakeCubes[0].position.x == this.decreaseFood.position.x
 		&& this.snake.snakeCubes[0].position.y == this.decreaseFood.position.y){
 
+        this.snake.decreaseSize();
+
 		this.decreaseFood.generateFood(this.snake.snakeCubes, this.food, this.speedFood, this.lessIntesityFood, this.moreIntensityFood);
 
-		this.snake.decreaseSize();
 	}
 
 	// Si la serpiente se ha comido una bola amarilla
