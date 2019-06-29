@@ -1,7 +1,7 @@
 class MyScene extends THREE.Scene {
   constructor (unRenderer) {
     super();
-    
+
     this.createCamera (unRenderer);
 
     this.lightIntensity = 0.5;
@@ -12,7 +12,7 @@ class MyScene extends THREE.Scene {
     this.sizeMapY = 30;
     // Crear el mapa
     this.createMap ();
-    
+
     // Velocidad independiente del procesador
     this.tiempoAnterior = Date.now();
 
@@ -22,7 +22,7 @@ class MyScene extends THREE.Scene {
 
     // COMIDA QUE HACE CRECER LA SERPIENTE
     this.food = new Food(this.sizeMapX, this.sizeMapY);
-    
+
     // COMIDA QUE HACE INCREMENTAR LA VELOCIDAD DE LA SERPIENTE
     this.speedFood = new SpeedFood(this.sizeMapX, this.sizeMapY);
 
@@ -34,7 +34,7 @@ class MyScene extends THREE.Scene {
 
     // COMIDA QUE DISMINUYE LA INTENSIDAD DE LA LUZ
     this.lessIntesityFood = new LessIntensityFood(this.sizeMapX, this.sizeMapY);
-    
+
     this.food.generateFood(this.snake.snakeCubes, this.speedFood, this.decreaseFood, this.lessIntesityFood, this.moreIntensityFood);
     this.speedFood.generateFood(this.snake.snakeCubes, this.food, this.decreaseFood, this.lessIntesityFood, this.moreIntensityFood);
     this.decreaseFood.generateFood(this.snake.snakeCubes, this.food, this.speedFood, this.lessIntesityFood, this.moreIntensityFood);
@@ -53,7 +53,7 @@ class MyScene extends THREE.Scene {
 	this.setMessageMoreFood("Las bolas amarillas aumentan la luz");
 	this.setMessageLessFood("Las bolas blancas disminuyen la luz");
   }
-  
+
   createCamera (unRenderer) {
     // Para crear una cámara le indicamos
     //   El ángulo del campo de visión en grados sexagesimales
@@ -67,11 +67,11 @@ class MyScene extends THREE.Scene {
     this.camera.lookAt(look);
     this.add (this.camera);
   }
-  
+
   createLights () {
     var ambientLight = new THREE.AmbientLight(0xccddee, 0.35);
     this.add (ambientLight);
-    
+
     this.spotLight = new THREE.SpotLight( 0xffffff, this.lightIntensity );
     this.spotLight.position.set( 0, 0, 100 );
     this.add (this.spotLight);
@@ -144,13 +144,13 @@ class MyScene extends THREE.Scene {
     }
 
    }
-  
+
   getCamera () {
     // En principio se devuelve la única cámara que tenemos
     // Si hubiera varias cámaras, este método decidiría qué cámara devuelve cada vez que es consultado
     return this.camera;
   }
-  
+
   setCameraAspect (ratio) {
     this.camera.aspect = ratio;
     this.camera.updateProjectionMatrix();
@@ -160,7 +160,7 @@ class MyScene extends THREE.Scene {
 
       if(!this.snake.running)
       	this.snake.start();
-        
+
       this.snake.changeDirection(move);
 
   }
@@ -197,7 +197,7 @@ class MyScene extends THREE.Scene {
 
 		this.decreaseFood.generateFood(this.snake.snakeCubes, this.food, this.speedFood, this.lessIntesityFood, this.moreIntensityFood);
 
-		//this.snake.decreaseSize();
+		this.snake.decreaseSize();
 	}
 
 	// Si la serpiente se ha comido una bola amarilla

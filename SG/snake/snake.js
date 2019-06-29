@@ -1,4 +1,4 @@
- 
+
 class Snake extends THREE.Mesh {
   constructor(sizeMapX, sizeMapY) {
     super();
@@ -21,7 +21,7 @@ class Snake extends THREE.Mesh {
     // Posición de la cabeza de la serpiente
     this.snakePosX = 0;
     this.snakePosY = 0;
-    
+
     // Tamaño de los cubos de la serpiente
     this.xSnake = 1;
     this.ySnake = 1;
@@ -87,10 +87,10 @@ class Snake extends THREE.Mesh {
   lose(){
     this.gameOver = true;
   }
- 
+
   winner(){
   	if(this.sizeSnake == (this.sizeMapX-2)*(this.sizeMapY-2)-5){ // -5 porque hay 5 tipos de bolas y siempre estarán en pantalla
-  		this.win = true;  
+  		this.win = true;
       this.running = false;
   	}
   }
@@ -104,7 +104,7 @@ class Snake extends THREE.Mesh {
   	newCube.geometry = new THREE.BoxGeometry (this.xSnake,this.ySnake,0);
   	newCube.material = new THREE.MeshPhongMaterial( {color: 0x00ff00} );
   	newCube.geometry.applyMatrix( new THREE.Matrix4().makeTranslation(0.5, 0.5, 0));
-  	
+
   	var edges = new THREE.EdgesGeometry( newCube.geometry );
   	var line = new THREE.LineSegments( edges, new THREE.LineBasicMaterial( { color: 0x000000 } ) );
   	newCube.add(line);
@@ -145,7 +145,7 @@ class Snake extends THREE.Mesh {
     }
 
   	if (this.direction == 0){ // derecha
-  		  this.snakeCubes[0].position.x += this.xSnake;  
+  		  this.snakeCubes[0].position.x += this.xSnake;
     }
     else if (this.direction == 2){ //izquierda
  		    this.snakeCubes[0].position.x -= this.xSnake;
@@ -161,11 +161,11 @@ class Snake extends THREE.Mesh {
   // Comprobar los choques con los muros
   compruebaMuros(){
 
-    if (this.snakeCubes[0].position.x <= (-this.sizeMapX/2+0.5) || this.snakeCubes[0].position.x >= (this.sizeMapX/2-1.5) || 
+    if (this.snakeCubes[0].position.x <= (-this.sizeMapX/2+0.5) || this.snakeCubes[0].position.x >= (this.sizeMapX/2-1.5) ||
       this.snakeCubes[0].position.y >= (this.sizeMapY/2-1.5) || this.snakeCubes[0].position.y <= (-this.sizeMapY/2+0.5)){
         this.lose();
         this.running = false;
-    } 
+    }
 
   }
 
@@ -192,8 +192,8 @@ class Snake extends THREE.Mesh {
       if(this.tiempoTranscurrido >= this.speed){
       	if(this.running){
       		  this.moveSnake();
-          	//this.compruebaMuros();
-          	this.compruebaChoque(); 
+          	this.compruebaMuros();
+          	this.compruebaChoque();
         }
 
       	this.tiempoTranscurrido = 0;
