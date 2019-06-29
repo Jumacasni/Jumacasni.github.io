@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head><title>Snake</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="./libs/three.min.js"></script>
+    <script type="text/javascript" src="./libs/jquery.js"></script>
+    <script type="text/javascript" src="./libs/dat.gui.js"></script>
+    <script type="text/javascript" src="./libs/TrackballControls.js"></script>
+    <script type="text/javascript" src="./snake/snake.js"></script>
+    <script type="text/javascript" src="./snake/food.js"></script>  
+    <script type="text/javascript" src="./snake/speedFood.js"></script>
+    <script type="text/javascript" src="./snake/decreaseFood.js"></script>   
+    <script type="text/javascript" src="./snake/moreIntensityFood.js"></script>   
+    <script type="text/javascript" src="./snake/lessIntensityFood.js"></script>         
+    <script type="text/javascript" src="./snake/MyScene.js"></script>    
+    <script type="text/javascript" src="./snake/script.js"></script>    
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden; 
+        }
+    </style>
+</head>
+<body>
+
+<!-- Div which will show several messages -->
+<div style="position:absolute; left:10px; right:80%; top:10px" id="Messages">
+</div>
+
+<!-- Div which will show several messages -->
+<div style="position:absolute; left:10px; right:80%; top:30%; color:#04B404" id="food">
+</div>
+<!-- Div which will show several messages -->
+<div style="position:absolute; left:10px; right:80%; top:40%; color:#ff00ff" id="speedFood">
+</div>
+<!-- Div which will show several messages -->
+<div style="position:absolute; left:10px; right:80%; top:50%; color:#0404B4" id="decreaseFood">
+</div>
+<!-- Div which will show several messages -->
+<div style="position:absolute; left:10px; right:80%; top:60%; color:#D7DF01" id="moreFood">
+</div>
+<!-- Div which will show several messages -->
+<div style="position:absolute; left:10px; right:80%; top:70%; color:#424242" id="lessFood">
+</div>
+
+<!-- Div which will hold the Output -->
+<div id="WebGL-output">
+</div>
+</body>
+</html>
