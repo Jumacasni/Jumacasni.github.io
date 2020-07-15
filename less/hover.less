@@ -1,0 +1,91 @@
+body:not(.touch-device){
+	/*********************/
+	// Header
+	/*********************/
+	a{
+		cursor: unset;
+	}
+	.header-container{
+		.header-item{
+			transition: color .4s, border-color .4s;
+			&:hover{
+				cursor: pointer;
+				color: @salmon;
+			}
+		}
+	}
+	.profile-picture .image-box-container .info-container .icons-container .icon{
+		transition: fill .4s;
+		&:hover{
+			cursor: pointer;
+			fill: @salmon;
+		}
+	}
+	.profile-picture .image-box-container .box-container .box-content .data-container .data-content{
+		.icon{
+			transition: fill .4s;
+		}
+		.text{
+			transition: color .4s;
+		}
+		&:hover{
+			cursor: pointer;
+			.icon{
+				fill: @salmon;
+			}
+			.text{
+				color: @salmon;
+			}
+		}
+	}
+
+	.footer-container .icons-container .icon-content{
+		&:hover{
+			cursor: pointer;
+		}
+		.icon{
+			transition: fill .4s;
+			&:hover{
+				fill: @salmon;
+			}
+		}
+	}
+
+	.footer-container .data-container .data-content{
+		.text{
+			transition: color .4s;
+		}
+		.icon{
+			transition: fill .4s;
+		}
+		&:hover{
+			cursor: pointer;
+			.text{
+				color: @salmon;
+			}
+			.icon{
+				fill: @salmon;
+			}
+		}
+	}
+
+	.header-container .inicio{
+		cursor: pointer;
+		.image-container{
+			transition: border-color .4s;
+		}
+		&:hover{
+			.image-container{
+				border-color: @salmon;
+			}
+		}
+	}
+
+	.formacion-content .year-container .info-container .info-title.link{
+		cursor: pointer;
+		transition: border-color .4s;
+		&:hover{
+			border-color: @blue-dark;
+		}
+	}
+}
