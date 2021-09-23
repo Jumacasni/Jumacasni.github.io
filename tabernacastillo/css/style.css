@@ -1,0 +1,208 @@
+/************************************/
+/*********  FONT FAMILIES	*********/
+/************************************/
+@font-face {
+  font-family: exo-regular;
+  src: url(../fonts/Exo/static/Exo-Regular.ttf);
+}
+
+@font-face {
+  font-family: exo-bold;
+  src: url(../fonts/Exo/static/Exo-Bold.ttf);
+}
+
+@font-face {
+  font-family: exo-light;
+  src: url(../fonts/Exo/static/Exo-Light.ttf);
+}
+
+.font-medium {
+	font-size: 28px;
+}
+
+.font-p {
+	font-family: exo-regular;
+	font-size: 16px;
+}
+
+.wine .font-title {
+	font-family: exo-bold;
+	font-size: 36px;
+	text-shadow: 1px 1px #999999;
+}
+
+.font-title {
+	font-family: exo-bold;
+	font-size: 24px;
+	text-shadow: 1px 1px #999999;
+}
+
+.font-center {
+	text-align: center;
+}
+
+.font-black {
+	color: #000;
+}
+
+.font-dark-red {
+	color: #9b0c0c;
+}
+
+.font-underline {
+	text-decoration: underline;
+}
+
+body {
+	background-color: #ffffbb;
+}
+
+p {
+	margin: 0;
+}
+
+.food-container {
+	position: relative;
+	display: block;
+	width: 40%;
+	max-width: 550px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+}
+
+.food-container .food-content {
+	position: relative;
+	display: block;
+}
+
+.food-container .food-content .row-plate {
+	margin-bottom: 15px;
+}
+
+.food-container .food-content .row-plate .plate {
+	margin-right: 20px;
+}
+
+.food-container .food-content .row-plate .prices {
+	width: 20%;
+	min-width: 130px;
+}
+
+.food-container .food-content .row-plate, .prices {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+.food-container .food-content .prices {
+	text-align: center;
+	align-items: center;
+}
+
+.food-container.wine .food-content .row-plate {
+	justify-content: center;
+}
+
+.food-content .row-plate .prices .price1.only-price {
+	width: 100%;
+}
+
+.food-content .row-plate .prices .price1 {
+	width: 50%;
+}
+
+.food-content .row-plate .prices .price2 {
+	width: 50%;
+}
+
+.food-container.wine .food-content {
+	margin-bottom: 40px;
+}
+
+
+.food-container.wine .food-content .row-plate .plate {
+    margin-right: 0px;
+}
+
+.small-separator {
+	width: 30%;
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	border-top: 3px solid #bbb;
+	border-radius: 5px;
+	margin-bottom: 50px;
+}
+
+.big-separator {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	border-top: 8px solid #bbb;
+	border-radius: 5px;
+	margin-bottom: 50px;
+}
+
+.margin-big {
+	margin-bottom: 40px;
+}
+
+.margin-small {
+	margin-bottom: 20px;
+}
+
+@media(max-width: 1024px){
+
+.food-container {
+	width: 50%;
+}
+
+}
+
+@media(max-width: 768px){
+
+.food-container {
+	width: 90%;
+}
+
+.small-separator {
+	width: 60%;
+}
+
+.big-separator {
+	width: 90%;
+}
+
+.food-container .food-content .row-plate .prices {
+	min-width: 92px;
+}
+
+.font-title {
+	font-size: 21px;
+}
+
+.font-p {
+	font-size: 14px;
+}
+
+.food-container .food-content .row-plate .plate {
+	margin-right: 5px;
+}
+
+.food-container .food-content .row-plate {
+	margin-bottom: 20px;
+}
+
+.food-container, .small-separator, .big-separator {
+	margin-bottom: 30px;
+}
+
+.margin-big {
+	margin-bottom: 20px;
+}
+
+.margin-small {
+	margin-bottom: 10px;
+}
+}
