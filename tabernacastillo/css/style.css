@@ -12,8 +12,22 @@
 }
 
 @font-face {
-  font-family: exo-light;
-  src: url(../fonts/Exo/static/Exo-Light.ttf);
+  font-family: cinzel-bold;
+  src: url(../fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf);
+}
+
+.font-h1 {
+	font-family: cinzel-bold;
+	font-size: 130px;
+	text-shadow: 4px 4px #000;
+}
+
+.title-container .first {
+	margin-left: 0px;
+}
+
+.title-container .second {
+	text-align: right;
 }
 
 .font-medium {
@@ -21,8 +35,8 @@
 }
 
 .font-p {
-	font-family: exo-regular;
-	font-size: 16px;
+	font-family: exo-bold;
+	font-size: 20px;
 }
 
 .wine .font-title {
@@ -33,12 +47,16 @@
 
 .font-title {
 	font-family: exo-bold;
-	font-size: 24px;
+	font-size: 32px;
 	text-shadow: 1px 1px #999999;
 }
 
 .font-center {
 	text-align: center;
+}
+
+.font-white {
+	color: #fff;
 }
 
 .font-black {
@@ -49,16 +67,67 @@
 	color: #9b0c0c;
 }
 
+.font-light-red {
+	color: #e60000;
+}
+
 .font-underline {
 	text-decoration: underline;
 }
 
 body {
+	margin: 0;
 	background-color: #ffffbb;
 }
 
 p {
 	margin: 0;
+}
+
+.module-cover {
+	position: relative;
+	margin-bottom: 10vh;
+}
+
+.module-cover .cover-content {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 90vh
+}
+
+.module-cover .bg-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.module-cover .bg-container img {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.module-cover .bg-container .bg-mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(58,58,58,0.6);
+}
+
+.module-cover .title-container {
+	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 55%;
 }
 
 .food-container {
@@ -152,7 +221,35 @@ p {
 	margin-bottom: 20px;
 }
 
+@media(max-width: 1440px){
+
+.font-h1 {
+	font-size: 120px;
+}
+
+}
+
+@media(max-width: 1250px){
+
+.font-h1 {
+	font-size: 100px;
+}
+
+}
+
 @media(max-width: 1024px){
+
+.module-cover .title-container {
+	width: 70%;
+}
+
+.font-p {
+	font-size: 16px;
+}
+
+.font-title {
+	font-size: 24px;
+}
 
 .food-container {
 	width: 50%;
@@ -161,6 +258,18 @@ p {
 }
 
 @media(max-width: 768px){
+
+.font-h1 {
+	font-size: 50px;
+}
+
+.module-cover .cover-content{
+	height: 65vh;
+}
+
+.module-cover .title-container {
+	width: 80%;
+}
 
 .food-container {
 	width: 90%;
@@ -175,15 +284,11 @@ p {
 }
 
 .food-container .food-content .row-plate .prices {
-	min-width: 92px;
+	min-width: 100px;
 }
 
-.font-title {
+.font-medium {
 	font-size: 21px;
-}
-
-.font-p {
-	font-size: 14px;
 }
 
 .food-container .food-content .row-plate .plate {
