@@ -263,6 +263,18 @@ p {
 	font-size: 50px;
 }
 
+.font-p {
+	font-size: 18px;
+}
+
+.font-title {
+	font-size: 28px;
+}
+
+.module-cover {
+	margin-bottom: 50px;
+}
+
 .module-cover .cover-content{
 	height: 65vh;
 }
@@ -284,7 +296,7 @@ p {
 }
 
 .food-container .food-content .row-plate .prices {
-	min-width: 100px;
+	min-width: 120px;
 }
 
 .font-medium {
