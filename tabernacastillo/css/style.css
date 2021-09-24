@@ -36,6 +36,7 @@
 }
 
 .font-medium {
+	font-family: exo-regular;
 	font-size: 28px;
 }
 
@@ -91,6 +92,15 @@
 	text-decoration: underline;
 }
 
+/****************************/
+/*********  HOVER	*********/
+/****************************/
+
+body:not(.touch-device) .footer-container .footer-content .tel-item .link:hover {
+	border-color: #c9bdbd;
+	color: #c9bdbd;
+}
+
 body {
 	margin: 0;
 	background-color: #ffffed;
@@ -125,7 +135,7 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100vw;
+	width: 100%;
 	height: 90vh
 }
 
@@ -169,6 +179,13 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 50px;
+}
+
+.food-container.slider {
+	width: 100%;
+	padding-right: 50px;
+	padding-left: 50px;
+	max-width: none;
 }
 
 .food-container .food-content {
@@ -283,16 +300,15 @@ a {
 	margin-bottom: 30px;
 }
 
-body:not(.touch-device) .footer-container .footer-content .tel-item .link:hover {
-	border-color: #c9bdbd;
-	color: #c9bdbd;
-}
-
 .footer-container .footer-content .tel-item .link {
 	border-bottom: 2px solid white;
 	color: white;
 	transition: border-color .2s, color .2s;
 }
+
+/********************************/
+/*********  MEDIA QUERY	*********/
+/********************************/
 
 @media(max-width: 1440px){
 
@@ -392,12 +408,95 @@ body:not(.touch-device) .footer-container .footer-content .tel-item .link:hover 
 		margin-bottom: 10px;
 	}
 
+	.carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+
 }
 
 @media(max-width: 520px){
 
 	.font-h1 {
 		font-size: 50px;
+	}
+
+}
+
+/****************************/
+/*********  SLIDER	*********/
+/****************************/
+
+.splide__slide {
+	margin-right: 20px;
+}
+
+.splide__pagination {
+	display: none;
+}
+
+.splide__slide img {
+	width: 100%;
+	height: 100%;
+	max-height: 400px;
+	object-fit: cover;
+}
+
+body:not(.touch-device) .splide__arrow:hover {
+	opacity: 1;	
+}
+
+body:not(.touch-device) .splide__arrow {
+	background: #9b0c0c;
+	opacity: .5;
+	transition: opacity .2s;
+}
+
+body.touch-device .splide__arrow {
+	background: #9b0c0c;
+	opacity: .5;
+}
+
+
+.splide__arrow svg path {
+	fill: #ffffed;
+}
+
+.splide__track {
+	width: 85%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media(max-width: 768px){
+
+	.food-container.slider {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+
+	.splide__slide img {
+		height: 100%;
+		max-height: 500px;
+		object-fit: cover;
+	}
+
+	.splide__arrow--prev {
+		left: 0;
+	}
+
+	.splide__arrow--next {
+		right: 0;
+	}
+
+}
+
+@media(max-width: 480px){
+	
+	.splide__track {
+		width: 70%;
 	}
 
 }

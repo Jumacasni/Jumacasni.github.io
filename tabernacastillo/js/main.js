@@ -1,8 +1,11 @@
 var scrollAnimations;
 var webLoaded = false;
+var width;
+var splide;
 
 $(window).on('load', function(){
 	webLoaded = true;
+	width = $("body").prop("clientWidth")
 	loadJS();
 });
 
@@ -16,10 +19,47 @@ function firstDocumentReady(){
 	}else{
 		document.body.classList.remove("touch-device");
 	}
+
+	document.addEventListener( 'DOMContentLoaded', function () {
+		new Splide( '.splide' ).mount();
+	} );
 }
 
 function loadJS(){
 	scrollAnimations = new ScrollAnimations();
+
+	if (width <= 480) {
+		splide = new Splide( '.splide', {
+			type   : 'loop',
+			perPage: 1,
+			focus  : 'center',
+		} ).mount();
+	}
+
+	else if (width <= 768) {
+		splide = new Splide( '.splide', {
+			type   : 'loop',
+			perPage: 2,
+			focus  : 'center',
+		} ).mount();
+	}
+
+	else if(width <= 1024) {
+		splide = new Splide( '.splide', {
+			type   : 'loop',
+			perPage: 3,
+			focus  : 'center',
+		} ).mount();
+	}
+
+
+	else {
+		splide = new Splide( '.splide', {
+			type   : 'loop',
+			perPage: 4,
+			focus  : 'center',
+		} ).mount();
+	}
 }
 
 function isTouchDevice() {  
@@ -33,3 +73,24 @@ function isTouchDevice() {
 			(navigator.maxTouchPoints || navigator.msMaxTouchPoints))
 		);
 }
+
+$(window).resize(function() {
+    width = $("body").prop("clientWidth");
+
+    if (width <= 480) {
+		splide.options = { perPage: 1 };
+	}
+
+    else if (width <= 768) {
+		splide.options = { perPage: 2 };
+	}
+
+	else if(width <= 1024) {
+		splide.options = { perPage: 3 };
+	}
+
+
+	else {
+		splide.options = { perPage: 4 };
+	}
+});
