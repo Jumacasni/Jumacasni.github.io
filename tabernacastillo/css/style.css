@@ -105,15 +105,16 @@ a {
 	color: black;
 }
 
-.lazy-gradient {
-	position: absolute;
-	display: block;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: linear-gradient(135deg, #e1deda 0%, #d9d9bd 100%)
+.no-src.lazyload,
+.no-src.lazyloading {
+	opacity: 0;
 }
+
+.no-src.lazyloaded {
+	opacity: 1;
+	transition: opacity 300ms;
+}
+
 .module-cover {
 	position: relative;
 	margin-bottom: 10vh;
