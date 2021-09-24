@@ -2,18 +2,23 @@
 /*********  FONT FAMILIES	*********/
 /************************************/
 @font-face {
-  font-family: exo-regular;
-  src: url(../fonts/Exo/static/Exo-Regular.ttf);
+	font-family: exo-regular;
+	src: url(../fonts/Exo/static/Exo-Regular.ttf);
 }
 
 @font-face {
-  font-family: exo-bold;
-  src: url(../fonts/Exo/static/Exo-Bold.ttf);
+	font-family: exo-bold;
+	src: url(../fonts/Exo/static/Exo-Bold.ttf);
 }
 
 @font-face {
-  font-family: cinzel-bold;
-  src: url(../fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf);
+	font-family: rumraisin;
+	src: url(../fonts/Rum_Raisin/RumRaisin-Regular.ttf);
+}
+
+@font-face {
+	font-family: cinzel-bold;
+	src: url(../fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf);
 }
 
 .font-h1 {
@@ -37,6 +42,17 @@
 .font-p {
 	font-family: exo-bold;
 	font-size: 20px;
+}
+
+.font-p2 {
+	font-family: exo-bold;
+	font-size: 12px;
+}
+
+.font-new {
+	font-family: rumraisin;
+	font-size: 14px;
+	letter-spacing: 1.5px;
 }
 
 .wine .font-title {
@@ -77,11 +93,16 @@
 
 body {
 	margin: 0;
-	background-color: #ffffbb;
+	background-color: #ffffed;
 }
 
 p {
 	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: black;
 }
 
 .module-cover {
@@ -150,6 +171,9 @@ p {
 }
 
 .food-container .food-content .row-plate .plate {
+	position: relative;
+	display: flex;
+	align-items: center;
 	margin-right: 20px;
 }
 
@@ -221,105 +245,149 @@ p {
 	margin-bottom: 20px;
 }
 
+.novedad {
+	position: relative;
+	border-radius: 20px;
+	padding: 2px 8px;
+	background-color: #035f83;
+	border: 2px solid black;
+	margin-left: 20px;
+}
+
+.footer-container {
+	position: relative;
+	background-color: #9b0c0c;
+	padding: 35px 0;
+}
+
+.footer-container .footer-content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer-container .footer-content .tel-item {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+body:not(.touch-device) .footer-container .footer-content .tel-item .link:hover {
+	border-color: #c9bdbd;
+	color: #c9bdbd;
+}
+
+.footer-container .footer-content .tel-item .link {
+	border-bottom: 2px solid white;
+	color: white;
+	transition: border-color .2s, color .2s;
+}
+
 @media(max-width: 1440px){
 
-.font-h1 {
-	font-size: 120px;
-}
+	.font-h1 {
+		font-size: 120px;
+	}
 
 }
 
 @media(max-width: 1250px){
 
-.font-h1 {
-	font-size: 100px;
-}
+	.font-h1 {
+		font-size: 100px;
+	}
 
 }
 
 @media(max-width: 1024px){
 
-.module-cover .title-container {
-	width: 70%;
-}
+	.module-cover .title-container {
+		width: 70%;
+	}
 
-.font-p {
-	font-size: 16px;
-}
+	.font-p {
+		font-size: 18px;
+	}
 
-.font-title {
-	font-size: 24px;
-}
+	.font-title {
+		font-size: 28px;
+	}
 
-.food-container {
-	width: 50%;
-}
+	.food-container {
+		width: 50%;
+	}
 
 }
 
 @media(max-width: 768px){
 
-.font-h1 {
-	font-size: 50px;
+	.font-h1 {
+		font-size: 80px;
+	}
+
+	.footer-container .footer-content .font-p {
+		font-size: 15px;
+	}
+
+	.module-cover {
+		margin-bottom: 50px;
+	}
+
+	.module-cover .cover-content{
+		height: 65vh;
+	}
+
+	.module-cover .title-container {
+		width: 80%;
+	}
+
+	.food-container {
+		width: 90%;
+	}
+
+	.small-separator {
+		width: 60%;
+	}
+
+	.big-separator {
+		width: 90%;
+	}
+
+	.food-container .food-content .row-plate .prices {
+		min-width: 120px;
+	}
+
+	.font-medium {
+		font-size: 21px;
+	}
+
+	.food-container .food-content .row-plate .plate {
+		margin-right: 5px;
+	}
+
+	.food-container .food-content .row-plate {
+		margin-bottom: 20px;
+	}
+
+	.food-container, .small-separator, .big-separator {
+		margin-bottom: 30px;
+	}
+
+	.margin-big {
+		margin-bottom: 20px;
+	}
+
+	.margin-small {
+		margin-bottom: 10px;
+	}
+
 }
 
-.font-p {
-	font-size: 18px;
-}
+@media(max-width: 520px){
 
-.font-title {
-	font-size: 28px;
-}
+	.font-h1 {
+		font-size: 50px;
+	}
 
-.module-cover {
-	margin-bottom: 50px;
-}
-
-.module-cover .cover-content{
-	height: 65vh;
-}
-
-.module-cover .title-container {
-	width: 80%;
-}
-
-.food-container {
-	width: 90%;
-}
-
-.small-separator {
-	width: 60%;
-}
-
-.big-separator {
-	width: 90%;
-}
-
-.food-container .food-content .row-plate .prices {
-	min-width: 120px;
-}
-
-.font-medium {
-	font-size: 21px;
-}
-
-.food-container .food-content .row-plate .plate {
-	margin-right: 5px;
-}
-
-.food-container .food-content .row-plate {
-	margin-bottom: 20px;
-}
-
-.food-container, .small-separator, .big-separator {
-	margin-bottom: 30px;
-}
-
-.margin-big {
-	margin-bottom: 20px;
-}
-
-.margin-small {
-	margin-bottom: 10px;
-}
 }

@@ -10,24 +10,25 @@
 	<meta name="description" content="Carta digital de Taberna Castillo en Albolote, Granada"/>
 	
 	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+	<script src="./js/mq.genie.min.js"></script>
 </head>
 
 <body>
 	<div class="module-cover">
 		<div class="cover-content">
 			<div class="bg-container">
-				<img src="./img/portada.png">
+				<img class="lazy" data-src="./img/portada.png">
 				<div class="bg-mask"></div>
 			</div>
 			<div class="title-container">
-				<p class="font-h1 font-white first"><span class="font-light-red">T</span>aberna</p>
-				<p class="font-h1 font-white second"><span class="font-light-red">C</span>astillo</p>
+				<p class="font-h1 font-white first js-animate" data-animation-type="right-opacity"><span class="font-light-red">T</span>aberna</p>
+				<p class="font-h1 font-white second js-animate" data-animation-type="left-opacity"><span class="font-light-red">C</span>astillo</p>
 			</div>
 		</div>
 	</div>
 
 	<section>
-		<div class="food-container">
+		<div class="food-container js-animate" data-animation-type="right-opacity" data-animation-delay=".2">
 			<div class="food-title margin-small">
 				<p class="font-title font-dark-red"><span class="font-black">I</span>b&eacute;ricos</p>
 			</div>
@@ -79,6 +80,16 @@
 				</div>
 				<div class="row-plate">
 					<div class="plate">
+						<p class="font-p">Salchich&oacute;n de Vic</p>
+						<p class="novedad font-new font-white">¡Nuevo!</p>
+					</div>
+					<div class="prices">
+						<p class="price1 font-p">18&euro;</p>
+						<p class="price2 font-p">12&euro;</p>
+					</div>
+				</div>
+				<div class="row-plate">
+					<div class="plate">
 						<p class="font-p">Chorizo de bellota de Salamanca</p>
 					</div>
 					<div class="prices">
@@ -98,9 +109,9 @@
 			</div>
 		</div>
 
-		<div class="small-separator"></div>
+		<div class="small-separator js-animate" data-animation-type="right-opacity"></div>
 
-		<div class="food-container">
+		<div class="food-container js-animate" data-animation-type="left-opacity">
 			<div class="food-title margin-big">
 				<p class="font-title font-dark-red"><span class="font-black">C</span>arnes</p>
 			</div>
@@ -172,9 +183,9 @@
 			</div>
 		</div>
 
-		<div class="small-separator"></div>
+		<div class="small-separator js-animate" data-animation-type="left-opacity"></div>
 
-		<div class="food-container">
+		<div class="food-container js-animate" data-animation-type="right-opacity">
 			<div class="food-title margin-small">
 				<p class="font-title font-dark-red"><span class="font-black">A</span>humados y <span class="font-black">S</span>alazones</p>
 			</div>
@@ -227,9 +238,9 @@
 			</div>
 		</div>
 
-		<div class="small-separator"></div>
+		<div class="small-separator js-animate" data-animation-type="right-opacity"></div>
 
-		<div class="food-container">
+		<div class="food-container js-animate" data-animation-type="left-opacity">
 			<div class="food-title margin-small">
 				<p class="font-title font-dark-red"><span class="font-black">Q</span>uesos - <span class="font-black">P</span>at&eacute;s y <span class="font-black">S</span>urtidos</p>
 			</div>
@@ -332,12 +343,22 @@
 						<p class="price1 font-p">12&euro;</p>
 					</div>
 				</div>
+				<div class="row-plate">
+					<div class="plate">
+						<p class="font-p">Queso payoyo</p>
+						<p class="novedad font-new font-white">¡Nuevo!</p>
+					</div>
+					<div class="prices">
+						<p class="price1 font-p">14&euro;</p>
+						<p class="price2 font-p">10&euro;</p>
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<div class="small-separator"></div>
+		<div class="small-separator js-animate" data-animation-type="left-opacity"></div>
 
-		<div class="food-container">
+		<div class="food-container js-animate" data-animation-type="right-opacity">
 			<div class="food-title margin-small">
 				<p class="font-title font-dark-red"><span class="font-black">E</span>laboraciones <span class="font-black">C</span>aseras</p>
 			</div>
@@ -387,6 +408,16 @@
 				<div class="row-plate">
 					<div class="plate">
 						<p class="font-p">Croquetas de morcilla con manzana caramelizada</p>
+					</div>
+					<div class="prices">
+						<p class="price1 font-p">14&euro;</p>
+						<p class="price2 font-p">10&euro;</p>
+					</div>
+				</div>
+				<div class="row-plate">
+					<div class="plate">
+						<p class="font-p">Croquetas de roquefort y nueces</p>
+						<p class="novedad font-new font-white">¡Nuevo!</p>
 					</div>
 					<div class="prices">
 						<p class="price1 font-p">14&euro;</p>
@@ -501,9 +532,9 @@
 			</div>
 		</div>
 
-		<div class="small-separator"></div>
+		<div class="small-separator js-animate" data-animation-type="right-opacity"></div>
 
-		<div class="food-container">
+		<div class="food-container js-animate" data-animation-type="left-opacity">
 			<div class="food-title margin-big">
 				<p class="font-title font-dark-red"><span class="font-black">M</span>ontaditos</p>
 			</div>
@@ -575,9 +606,9 @@
 			</div>
 		</div>
 
-		<div class="small-separator"></div>
+		<div class="small-separator js-animate" data-animation-type="left-opacity"></div>
 
-		<div class="food-container">
+		<div class="food-container js-animate" data-animation-type="right-opacity">
 			<div class="food-title margin-big">
 				<p class="font-title font-dark-red"><span class="font-black">E</span>laboraciones <span class="font-black">P</span>or <span class="font-black">E</span>ncargo</p>
 			</div>
@@ -605,9 +636,9 @@
 			</div>
 		</div>
 
-		<div class="big-separator"></div>
+		<div class="big-separator js-animate" data-animation-type="right-opacity"></div>
 
-		<div class="food-container wine">
+		<div class="food-container wine js-animate" data-animation-type="left-opacity">
 			<div class="food-title margin-big">
 				<p class="font-title font-center font-dark-red font-underline"><span class="font-black">V</span>inos</p>
 			</div>
@@ -668,6 +699,20 @@
 	</section>
 
 	<footer class="footer-container">
+		<div class="footer-content">
+			<p class="font-p font-white">C/ Motril s/n entrada por:</p>
+			<p class="font-p font-white">Ctra. Albolote-Maracena</p>
+			<p class="font-p font-white">18220 Albolote</p>
+			<p class="tel-item font-p font-white">Tlf: <a href="tel:+34958491391" target="_blank" rel="noopener noreferrer" class="link">958 49 13 91</a> / <a href="tel:+34677218109" target="_blank" rel="noopener noreferrer" class="link">677 21 81 09</a></p>
+			<p class="copy font-p2 font-white">&copy; 2021 Taberna Castillo</p>
+		</div>
 	</footer>
+
+	<script src="./js/lib/jquery-3.6.0.min.js"></script>
+	<script src="./js/lib/TweenMax.min.js"></script>
+	<script src="./js/lib/intersection-observer-polyfill.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.5.0/dist/lazyload.min.js"></script>
+	<script src="./js/scrollAnimation.js"></script>
+	<script src="./js/main.js"></script>
 </body>
 </html>
