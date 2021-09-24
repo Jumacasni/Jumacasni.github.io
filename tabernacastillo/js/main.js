@@ -1,5 +1,4 @@
 var scrollAnimations;
-var lazyLoadInstance;
 var webLoaded = false;
 
 $(window).on('load', function(){
@@ -21,7 +20,6 @@ function firstDocumentReady(){
 
 function loadJS(){
 	scrollAnimations = new ScrollAnimations();
-	lazyLoadInstance = new LazyLoad({});
 }
 
 function isTouchDevice() {  
