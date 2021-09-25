@@ -34,7 +34,7 @@ function ScrollAnimations($selector,_options){
 						}
 					});
 				}, 
-				{rootMargin: "0px 0px -"+window.innerHeight*0.15+"px 0px"}
+				{rootMargin: "0px 0px -"+window.innerHeight*0.05+"px 0px"}
 			);
 		}else{
 			firstTime = false;

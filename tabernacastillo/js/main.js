@@ -5,6 +5,7 @@ var splide;
 
 $(window).on('load', function(){
 	webLoaded = true;
+	$('.wrapper').addClass('loaded');
 	width = $("body").prop("clientWidth")
 	loadJS();
 });
@@ -60,6 +61,14 @@ function loadJS(){
 			focus  : 'center',
 		} ).mount();
 	}
+
+	bindEvents();
+}
+
+function bindEvents(){
+
+	window.addEventListener("disableScroll", disableScroll);
+    window.addEventListener("enableScroll", enableScroll);
 }
 
 function isTouchDevice() {  
