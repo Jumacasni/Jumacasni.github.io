@@ -1,3 +1,17 @@
+html,body {
+	text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none:;
+	overflow-x: hidden;
+	width: 100vw;
+}
+
+html {
+	font-size: 100%;
+	--webkit-text-size-adjust: 100%;
+}
+
 /************************************/
 /*********  FONT FAMILIES	*********/
 /************************************/
@@ -353,7 +367,7 @@ a {
 	}
 
 	.footer-container .footer-content .font-p {
-		font-size: 15px;
+		font-size: 13px;
 	}
 
 	.module-cover {
@@ -470,6 +484,16 @@ body.touch-device .splide__arrow {
 	margin-left: auto;
 }
 
+@media(max-width: 1024px){
+	.splide__arrow--prev {
+		left: 0;
+	}
+
+	.splide__arrow--next {
+		right: 0;
+	}
+}
+
 @media(max-width: 768px){
 
 	.food-container.slider {
@@ -481,14 +505,6 @@ body.touch-device .splide__arrow {
 		height: 100%;
 		max-height: 500px;
 		object-fit: cover;
-	}
-
-	.splide__arrow--prev {
-		left: 0;
-	}
-
-	.splide__arrow--next {
-		right: 0;
 	}
 
 }
