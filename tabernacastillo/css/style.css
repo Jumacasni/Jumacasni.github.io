@@ -320,6 +320,8 @@ a {
 	transition: border-color .2s, color .2s;
 }
 
+
+
 /********************************/
 /*********  MEDIA QUERY	*********/
 /********************************/
@@ -458,6 +460,24 @@ a {
 	object-fit: cover;
 }
 
+.splide__arrow--next {
+	right: 30px;
+}
+
+.splide__arrow--prev {
+	left: 30px;
+}
+
+.splide__arrow {
+	width: 50px;
+	height: 50px;
+}
+
+.splide__arrow svg {
+	width: 20px;
+	height: 20px;
+}
+
 body:not(.touch-device) .splide__arrow:hover {
 	opacity: 1;	
 }
@@ -482,6 +502,27 @@ body.touch-device .splide__arrow {
 	width: 85%;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+
+@media(max-width: 1250px){
+	.splide__arrow {
+		width: 40px;
+		height: 40px;
+	}
+
+	.splide__arrow svg {
+		width: 15px;
+		height: 15px;
+	}
+
+	.splide__arrow--prev {
+		left: 20px;
+	}
+
+	.splide__arrow--next {
+		right: 20px;
+	}
 }
 
 @media(max-width: 1024px){
