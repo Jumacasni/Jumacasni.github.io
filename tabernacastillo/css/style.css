@@ -371,10 +371,6 @@ a {
 		font-size: 13px;
 	}
 
-	.module-cover {
-		margin-bottom: 50px;
-	}
-
 	.module-cover .cover-content{
 		height: calc(var(--1vh)*65);
 	}
