@@ -142,7 +142,7 @@ a {
 
 .module-cover {
 	position: relative;
-	margin-bottom: calc(var(--1vh)*10);
+	margin-bottom: calc(var(--1vh)*7.5);
 }
 
 .module-cover .cover-content {
@@ -151,7 +151,7 @@ a {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	height: calc(var(--1vh)*90);
+	height: calc(var(--1vh)*75);
 }
 
 .module-cover .bg-container {
