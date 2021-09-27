@@ -34,7 +34,8 @@ function loadJS(){
 			type   : 'loop',
 			perPage: 1,
 			focus  : 'center',
-			lazyLoad: true
+			lazyLoad: true,
+			nearby: true
 		} ).mount();
 	}
 
@@ -43,7 +44,8 @@ function loadJS(){
 			type   : 'loop',
 			perPage: 2,
 			focus  : 'center',
-			lazyLoad: true
+			lazyLoad: true,
+			nearby: true
 		} ).mount();
 	}
 
@@ -52,7 +54,8 @@ function loadJS(){
 			type   : 'loop',
 			perPage: 3,
 			focus  : 'center',
-			lazyLoad: true
+			lazyLoad: true,
+			nearby: true
 		} ).mount();
 	}
 
@@ -62,7 +65,8 @@ function loadJS(){
 			type   : 'loop',
 			perPage: 4,
 			focus  : 'center',
-			lazyLoad: true
+			lazyLoad: true,
+			nearby: true
 		} ).mount();
 	}
 }
