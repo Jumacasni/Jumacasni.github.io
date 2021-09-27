@@ -66,7 +66,7 @@ function loadJS(){
 			perPage: 4,
 			focus  : 'center',
 			lazyLoad: 'nearby',
-			preloadPages: 2
+			preloadPages: 4
 		} ).mount();
 	}
 }
