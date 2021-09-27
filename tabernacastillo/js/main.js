@@ -3,6 +3,10 @@ var webLoaded = false;
 var width;
 var splide;
 
+//FixVH
+var originalWidth;
+var originalHeight;
+
 $(window).on('load', function(){
 	webLoaded = true;
 	$('.wrapper').addClass('loaded');
@@ -12,7 +16,6 @@ $(window).on('load', function(){
 
 $(document).ready( function(){
 	firstDocumentReady();
-	_fixViewportHeight();
 })
 
 function firstDocumentReady(){
@@ -28,6 +31,8 @@ function firstDocumentReady(){
 }
 
 function loadJS(){
+	fixVh();
+	
 	scrollAnimations = new ScrollAnimations();
 
 	if (width <= 480) {
@@ -84,24 +89,6 @@ function isTouchDevice() {
 		);
 }
 
-function _fixViewportHeight() {
-	var html = document.querySelector('html');
-
-	function _onResize(event) {
-		html.style.height = window.innerHeight + 'px';
-	}
-
-	window.addEventListener('resize', _.debounce(_onResize, 125, {
-		leading: true,
-		maxWait: 250,
-		trailing: true
-	}));
-
-	_onResize();
-}
-
-_fixViewportHeight();
-
 $(window).resize(function() {
     width = $("body").prop("clientWidth");
 
@@ -122,3 +109,10 @@ $(window).resize(function() {
 		splide.options = { perPage: 4 };
 	}
 });
+
+function fixVh(){
+	var vh = window.innerHeight*0.01;
+	document.body.style.setProperty('--1vh', vh+'px');
+	originalWidth = window.innerWidth;
+	originalHeight = window.innerHeight;
+}

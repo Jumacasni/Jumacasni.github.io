@@ -5,6 +5,7 @@ html,body {
 	-ms-text-size-adjust: none:;
 	/*overflow-x: hidden;*/
 	width: 100%;
+	--1vh: 1vh;
 }
 
 html {
@@ -141,7 +142,7 @@ a {
 
 .module-cover {
 	position: relative;
-	margin-bottom: 10vh;
+	margin-bottom: calc(var(--1vh)*10);
 }
 
 .module-cover .cover-content {
@@ -150,7 +151,7 @@ a {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	height: 90vh
+	height: calc(var(--1vh)*90);
 }
 
 .module-cover .bg-container {
@@ -375,7 +376,7 @@ a {
 	}
 
 	.module-cover .cover-content{
-		height: 65vh;
+		height: calc(var(--1vh)*65);
 	}
 
 	.module-cover .title-container {
