@@ -61,14 +61,6 @@ function loadJS(){
 			focus  : 'center',
 		} ).mount();
 	}
-
-	bindEvents();
-}
-
-function bindEvents(){
-
-	window.addEventListener("disableScroll", disableScroll);
-    window.addEventListener("enableScroll", enableScroll);
 }
 
 function isTouchDevice() {  

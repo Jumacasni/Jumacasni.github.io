@@ -3,8 +3,8 @@ html,body {
 	-webkit-text-size-adjust: none;
 	-moz-text-size-adjust: none;
 	-ms-text-size-adjust: none:;
-	overflow-x: hidden;
-	width: 100vw;
+	/*overflow-x: hidden;*/
+	width: 100%;
 }
 
 html {
@@ -197,8 +197,6 @@ a {
 
 .food-container.slider {
 	width: 100%;
-	padding-right: 50px;
-	padding-left: 50px;
 	max-width: none;
 }
 
@@ -527,19 +525,31 @@ body.touch-device .splide__arrow {
 
 @media(max-width: 1024px){
 	.splide__arrow--prev {
-		left: 0;
+		left: 15px;
 	}
 
 	.splide__arrow--next {
-		right: 0;
+		right: 15px;
 	}
 }
 
 @media(max-width: 768px){
+	
+	.splide__arrow--prev {
+		left: 12px;
+	}
 
-	.food-container.slider {
-		padding-right: 20px;
-		padding-left: 20px;
+	.splide__arrow--next {
+		right: 12px;
+	}
+
+	.splide__arrow {
+		width: 35px;
+		height: 35px;
+	}
+
+	.splide__track {
+		width: 80%;
 	}
 
 	.splide__slide img {
@@ -550,8 +560,24 @@ body.touch-device .splide__arrow {
 
 }
 
+@media(max-width: 600px){
+	
+	.splide__track {
+		width: 80%;
+	}
+
+}
+
 @media(max-width: 480px){
 	
+	.splide__arrow--prev {
+		left: 10px;
+	}
+
+	.splide__arrow--next {
+		right: 10px;
+	}
+
 	.splide__track {
 		width: 70%;
 	}
